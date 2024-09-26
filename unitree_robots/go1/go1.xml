@@ -66,7 +66,7 @@
     <material name="dark" rgba="0.4 0.4 0.4 1"/>
     <material name="metal" rgba=".9 .95 .95 1" />
     <material name="gray" rgba="0.671705 0.692426 0.774270 1" />
-    <material name="transparent" rgba="1 1 1 0.1" />
+    <material name="transparent" rgba="1 1 1 0.01" />
 
     <mesh class="go1" file="trunk.stl"/>
     <mesh class="go1" file="hip.stl"/>

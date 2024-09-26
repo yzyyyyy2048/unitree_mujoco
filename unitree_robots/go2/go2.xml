@@ -41,7 +41,7 @@
     <material name="black" rgba="0 0 0 1" />
     <material name="white" rgba="1 1 1 1" />
     <material name="gray" rgba="0.671705 0.692426 0.774270 1" />
-    <material name="transparent" rgba="1 1 1 0.1" />
+    <material name="transparent" rgba="1 1 1 0.01" />
 
     <mesh file="base_0.obj" />
     <mesh file="base_1.obj" />
