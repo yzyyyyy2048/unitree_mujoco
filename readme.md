@@ -1,4 +1,16 @@
 # Introduction
+Differences with origin unitree mujoco repo:
+* Add foot force sensor
+* Modified keyframe qpos
+  * In simulation, use "Load key" button to reload the robot. 
+* Add new robot model:
+  * Unitree A1
+  * Unitree Aliengo
+  * Unitree Go1
+  * Xiaomi Cyberdog
+
+
+
 ## Unitree mujoco
 `unitree_mujoco` is a simulator developed based on `Unitree sdk2` and `mujoco`. Users can easily integrate the control programs developed with `Unitree_sdk2`, `unitree_ros2`, and `unitree_sdk2_python` into this simulator, enabling a seamless transition from simulation to physical development. The repository includes two versions of the simulator implemented in C++ and Python, with a structure as follows:
 ![](./doc/func.png)
