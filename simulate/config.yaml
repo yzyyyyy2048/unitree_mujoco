@@ -1,4 +1,4 @@
-robot: "go2"  # Robot name, "go2", "b2", "b2w", "h1", "go2w", "g1"
+robot: "lite3"  # Robot name, "go2", "b2", "b2w", "h1", "go2w", "g1"
 # extra robot: "cyberdog", "go1", "aliengo", "a1"
 
 robot_scene: "scene.xml" # Robot scene, /unitree_robots/[robot]/scene.xml 
