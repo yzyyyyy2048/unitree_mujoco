@@ -10,9 +10,8 @@ Robotics](https://www.unitree.com/). It is derived from the [publicly available
 URDF
 description](https://github.com/unitreerobotics/unitree_ros/tree/master/robots/go1_description).
 
-<p float="left">
-  <img src="go1.png" width="400">
-</p>
+![go1](go1.png)
+
 
 ## URDF → MJCF derivation steps
 

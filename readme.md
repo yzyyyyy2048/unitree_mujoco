@@ -8,6 +8,8 @@ Differences with origin unitree mujoco repo:
   * Unitree Aliengo
   * Unitree Go1
   * Xiaomi Cyberdog
+  * Deep Robotics Lite3
+  * Deep Robotics X30
 
 
 
