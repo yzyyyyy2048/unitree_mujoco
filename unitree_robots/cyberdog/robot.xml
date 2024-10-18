@@ -4,22 +4,21 @@
   <default>
     <default class="cyberdog">
       <geom friction="0.4" margin="0.001" condim="1"/>
-      <joint axis="0 1 0" damping="0.1" armature="0.01" frictionloss="0.2"/>
+      <joint axis="0 1 0" damping="0.01" armature="0.01" frictionloss="0.1"/>
       <motor ctrlrange="-12.0001 12.0001"/>
       <default class="abduction">
-        <joint axis="1 0 0" range="-1.0472 1.0472"/>
+        <joint axis="1 0 0" range="-0.68 0.68"/>
       </default>
       <default class="hip">
         <default class="front_hip">
-          <joint range="-1.5708 3.4907"/>
+          <joint range="-1.3258 2.7911"/>
         </default>
         <default class="back_hip">
-          <joint range="-0.5236 4.5379"/>
+          <joint range="-0.9769 3.1416"/>
         </default>
       </default>
       <default class="knee">
-        <joint range="-2.7227 -0.83776"/>
-        <motor ctrlrange="-45.43 45.43"/>
+        <joint range="-2.53073 -0.523599"/>
       </default>
       <default class="visual">
         <geom type="mesh" contype="0" conaffinity="0" group="2" material="dark"/>
@@ -48,7 +47,7 @@
   </asset>
 
   <worldbody>
-    <body name="base_link" pos="0 0 0.445" childclass="cyberdog">
+    <body name="base_link" pos="0 0 0.31" childclass="cyberdog">
 
       <inertial pos="0.0273 -0.000242 0.0143" quat="0 0 0 1"
                 mass="4.03"
@@ -69,23 +68,20 @@
       <body name="FL_abad" pos="0.164 0.042 0">
         <inertial pos="-0.00870249 0.0262609 -0.00018743" quat="-0.216425 0.671536 0.22334 0.672547" mass="0.577943"
                   diaginertia="0.000797811 0.000747905 0.000457908"/>
-        <joint name="FL_hip_joint" pos="0 0 0" axis="1 0 0" range="-0.680678 0.680678"
-               actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+        <joint name="FL_hip_joint" class="abduction"/>
         <geom size="0.039 0.0175" quat="0.707107 0.707107 0 0" type="cylinder" class="collision"/>
         <geom size="0.039 0.0175" pos="0 0.059 0" quat="0.707107 0.707107 0 0" type="cylinder" class="collision"/>
         <geom type="mesh" class="visual" material="dark" mesh="abad"/>
         <body name="FL_hip" pos="0 0.094 0">
           <inertial pos="-0.00171622 -0.0276376 -0.0148955" quat="0.972561 0.187345 0.00546887 0.137833" mass="0.5954"
                     diaginertia="0.00125179 0.00120656 0.000449032"/>
-          <joint name="FL_thigh_joint" pos="0 0 0" axis="0 1 0" range="-1.32645 2.79253"
-                 actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+          <joint name="FL_thigh_joint" class="front_hip"/>
           <geom size="0.06 0.0125 0.017" pos="0 0 -0.06" quat="0.707107 0 0.707107 0" type="box" class="collision"/>
           <geom type="mesh" class="visual" material="dark" mesh="hip"/>
           <body name="FL_knee" pos="0 0 -0.12">
             <inertial pos="0.00157271 -3.78302e-05 -0.106096" quat="0.708712 -0.0140225 -0.0146892 0.705206"
                       mass="0.144731" diaginertia="0.000843553 0.00083835 1.87502e-05"/>
-            <joint name="FL_calf_joint" pos="0 0 0" axis="0 1 0" range="-2.53073 -0.523599"
-                   actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+            <joint name="FL_calf_joint" class="knee"/>
             <geom class="visual" material="metal" type="mesh" mesh="knee"/>
             <geom size="0.008 0.008 0.091705" pos="0 0 -0.091705" quat="0 0 1 0" type="box" class="collision"/>
             <geom name="FL_knee_rubber" size="0.016" pos="-0.01 0 -0.007" quat="0 0 1 0" class="collision"/>
@@ -97,23 +93,20 @@
       <body name="FR_abad" pos="0.164 -0.042 0">
         <inertial pos="-0.00870249 -0.0262609 -0.00018743" quat="0.216425 0.671536 -0.22334 0.672547" mass="0.577943"
                   diaginertia="0.000797811 0.000747905 0.000457908"/>
-        <joint name="FR_hip_joint" pos="0 0 0" axis="1 0 0" range="-0.680678 0.680678"
-               actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+        <joint name="FR_hip_joint" class="abduction"/>
         <geom size="0.039 0.0175" quat="0.707107 0.707107 0 0" type="cylinder" class="collision"/>
         <geom size="0.039 0.0175" pos="0 -0.059 0" quat="0.707107 0.707107 0 0" type="cylinder" class="collision"/>
         <geom quat="0 1 0 0" type="mesh" class="visual" material="dark" mesh="abad"/>
         <body name="FR_hip" pos="0 -0.094 0">
           <inertial pos="-0.00171622 0.0276376 -0.0148955" quat="0.972561 -0.187345 0.00546887 -0.137833" mass="0.5954"
                     diaginertia="0.00125179 0.00120656 0.000449032"/>
-          <joint name="FR_thigh_joint" pos="0 0 0" axis="0 1 0" range="-1.32645 2.79253"
-                 actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+          <joint name="FR_thigh_joint" class="front_hip"/>
           <geom size="0.06 0.0125 0.017" pos="0 0 -0.06" quat="0.707107 0 0.707107 0" type="box" class="collision"/>
           <geom type="mesh" class="visual" material="dark" mesh="hip_mirror"/>
           <body name="FR_knee" pos="0 0 -0.12">
             <inertial pos="0.00157271 -3.78302e-05 -0.106096" quat="0.708712 -0.0140225 -0.0146892 0.705206"
                       mass="0.144731" diaginertia="0.000843553 0.00083835 1.87502e-05"/>
-            <joint name="FR_calf_joint" pos="0 0 0" axis="0 1 0" range="-2.53073 -0.523599"
-                   actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+            <joint name="FR_calf_joint" class="knee"/>
             <geom class="visual" material="metal" type="mesh" mesh="knee"/>
             <geom size="0.008 0.008 0.091705" pos="0 0 -0.091705" quat="0 0 1 0" type="box" class="collision"/>
             <geom name="FR_knee_rubber" size="0.016" pos="-0.01 0 -0.007" quat="0 0 1 0" class="collision"/>
@@ -125,23 +118,20 @@
       <body name="RL_abad" pos="-0.164 0.042 0">
         <inertial pos="0.00870249 0.0262609 -0.00018743" quat="0.22334 0.672547 -0.216425 0.671536" mass="0.577943"
                   diaginertia="0.000797811 0.000747905 0.000457908"/>
-        <joint name="RL_hip_joint" pos="0 0 0" axis="1 0 0" range="-0.680678 0.680678"
-               actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+        <joint name="RL_hip_joint" class="abduction"/>
         <geom size="0.039 0.0175" quat="0.707107 0.707107 0 0" type="cylinder" class="collision"/>
         <geom size="0.039 0.0175" pos="0 0.059 0" quat="0.707107 0.707107 0 0" type="cylinder" class="collision"/>
         <geom quat="0 0 1 0" type="mesh" class="visual" material="dark" mesh="abad"/>
         <body name="RL_hip" pos="0 0.094 0">
           <inertial pos="-0.00171622 -0.0276376 -0.0148955" quat="0.972561 0.187345 0.00546887 0.137833" mass="0.5954"
                     diaginertia="0.00125179 0.00120656 0.000449032"/>
-          <joint name="RL_thigh_joint" pos="0 0 0" axis="0 1 0" range="-0.977384 3.14159"
-                 actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+          <joint name="RL_thigh_joint" class="back_hip"/>
           <geom size="0.06 0.0125 0.017" pos="0 0 -0.06" quat="0.707107 0 0.707107 0" type="box" class="collision"/>
           <geom type="mesh" class="visual" material="dark" mesh="hip"/>
           <body name="RL_knee" pos="0 0 -0.12">
             <inertial pos="0.00157271 -3.78302e-05 -0.106096" quat="0.708712 -0.0140225 -0.0146892 0.705206"
                       mass="0.144731" diaginertia="0.000843553 0.00083835 1.87502e-05"/>
-            <joint name="RL_calf_joint" pos="0 0 0" axis="0 1 0" range="-2.53073 -0.523599"
-                   actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+            <joint name="RL_calf_joint" class="knee"/>
             <geom class="visual" material="metal" type="mesh" mesh="knee"/>
             <geom size="0.008 0.008 0.091705" pos="0 0 -0.091705" quat="0 0 1 0" type="box" class="collision"/>
             <geom name="RL_knee_rubber" size="0.016" pos="-0.01 0 -0.007" quat="0 0 1 0" class="collision"/>
@@ -153,23 +143,20 @@
       <body name="RR_abad" pos="-0.164 -0.042 0">
         <inertial pos="0.00870249 -0.0262609 -0.00018743" quat="-0.22334 0.672547 0.216425 0.671536" mass="0.577943"
                   diaginertia="0.000797811 0.000747905 0.000457908"/>
-        <joint name="RR_hip_joint" pos="0 0 0" axis="1 0 0" range="-0.680678 0.680678"
-               actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+        <joint name="RR_hip_joint" class="abduction"/>
         <geom size="0.039 0.0175" quat="0.707107 0.707107 0 0" type="cylinder" class="collision"/>
         <geom size="0.039 0.0175" pos="0 -0.059 0" quat="0.707107 0.707107 0 0" type="cylinder" class="collision"/>
         <geom quat="0 0 0 1" type="mesh" class="visual" material="dark" mesh="abad"/>
         <body name="RR_hip" pos="0 -0.094 0">
           <inertial pos="-0.00171622 0.0276376 -0.0148955" quat="0.972561 -0.187345 0.00546887 -0.137833" mass="0.5954"
                     diaginertia="0.00125179 0.00120656 0.000449032"/>
-          <joint name="RR_thigh_joint" pos="0 0 0" axis="0 1 0" range="-0.977384 3.14159"
-                 actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+          <joint name="RR_thigh_joint" class="back_hip"/>
           <geom size="0.06 0.0125 0.017" pos="0 0 -0.06" quat="0.707107 0 0.707107 0" type="box" class="collision"/>
           <geom type="mesh" class="visual" material="dark" mesh="hip_mirror"/>
           <body name="RR_knee" pos="0 0 -0.12">
             <inertial pos="0.00157271 -3.78302e-05 -0.106096" quat="0.708712 -0.0140225 -0.0146892 0.705206"
                       mass="0.144731" diaginertia="0.000843553 0.00083835 1.87502e-05"/>
-            <joint name="RR_calf_joint" pos="0 0 0" axis="0 1 0" range="-2.53073 -0.523599"
-                   actuatorfrcrange="-12.0001 12.0001" damping="0.01" frictionloss="0.1"/>
+            <joint name="RR_calf_joint" class="knee"/>
             <geom class="visual" material="metal" type="mesh" mesh="knee"/>
             <geom size="0.008 0.008 0.091705" pos="0 0 -0.091705" quat="0 0 1 0" type="box" class="collision"/>
             <geom name="RR_knee_rubber" size="0.016" pos="-0.01 0 -0.007" quat="0 0 1 0" class="collision"/>

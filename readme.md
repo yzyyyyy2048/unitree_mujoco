@@ -10,6 +10,8 @@ Differences with origin unitree mujoco repo:
   * Xiaomi Cyberdog
   * Deep Robotics Lite3
   * Deep Robotics X30
+  * Anybotics Anymal B
+  * Anybotics Anymal C
 
 
 
@@ -54,7 +56,7 @@ git clone https://github.com/unitreerobotics/unitree_sdk2.git
 cd unitree_sdk2/
 mkdir build
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=/opt/unitree_robotics
+cmake ..
 sudo make install
 ```
 For more details, see: https://github.com/unitreerobotics/unitree_sdk2
@@ -64,9 +66,11 @@ sudo apt install libglfw3-dev libxinerama-dev libxcursor-dev libxi-dev
 ```
 ```bash
 git clone https://github.com/google-deepmind/mujoco.git
+cd mujoco
+git checkout 3.2.1
 mkdir build && cd build
 cmake ..
-make -j4
+make -j
 sudo make install
 ```
 Test:
