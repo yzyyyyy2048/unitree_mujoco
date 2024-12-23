@@ -87,7 +87,7 @@ sudo apt install libyaml-cpp-dev
 ```
 ### 2. Compile unitree_mujoco
 ```bash
-git clone https://github.com/legubiao/unitree_mujoco
+git clone https://github.com/yzyyyyy2048/mujoco.git
 cd unitree_mujoco/simulate
 mkdir build && cd build
 cmake ..
