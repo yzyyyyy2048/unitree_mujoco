@@ -12,6 +12,8 @@ Differences with origin unitree mujoco repo:
   * Deep Robotics X30
   * Anybotics Anymal B
   * Anybotics Anymal C
+  * CatModel2_v1
+  * CatModel2_v2
 
 
 
