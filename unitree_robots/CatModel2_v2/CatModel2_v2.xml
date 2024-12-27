@@ -144,69 +144,69 @@
   </worldbody>
 
   <actuator>
-    <motor name="bodyf_pitch_joint_motor" joint="bodyf_pitch_joint" />
     <motor name="bodyb_yaw_joint_motor" joint="bodyb_yaw_joint" />
-    <motor class="HAA" name="LF_HAA_motor" joint="LF_HAA" />
-    <motor class="HFE" name="LF_HFE_motor" joint="LF_HFE" />
-    <motor class="KFE" name="LF_KFE_motor" joint="LF_KFE" />
-    <motor class="HAA" name="RF_HAA_motor" joint="RF_HAA" />
-    <motor class="HFE" name="RF_HFE_motor" joint="RF_HFE" />
-    <motor class="KFE" name="RF_KFE_motor" joint="RF_KFE" />
     <motor class="HAA" name="LH_HAA_motor" joint="LH_HAA" />
     <motor class="HFE" name="LH_HFE_motor" joint="LH_HFE" />
     <motor class="KFE" name="LH_KFE_motor" joint="LH_KFE" />
     <motor class="HAA" name="RH_HAA_motor" joint="RH_HAA" />
     <motor class="HFE" name="RH_HFE_motor" joint="RH_HFE" />
     <motor class="KFE" name="RH_KFE_motor" joint="RH_KFE" />
+    <motor name="bodyf_pitch_joint_motor" joint="bodyf_pitch_joint" />
+    <motor class="HAA" name="LF_HAA_motor" joint="LF_HAA" />
+    <motor class="HFE" name="LF_HFE_motor" joint="LF_HFE" />
+    <motor class="KFE" name="LF_KFE_motor" joint="LF_KFE" />
+    <motor class="HAA" name="RF_HAA_motor" joint="RF_HAA" />
+    <motor class="HFE" name="RF_HFE_motor" joint="RF_HFE" />
+    <motor class="KFE" name="RF_KFE_motor" joint="RF_KFE" />
   </actuator>
   
   <sensor>
-    <jointpos name="bodyf_pitch_joint_pos" joint="bodyf_pitch_joint"/>
     <jointpos name="bodyb_yaw_joint_pos" joint="bodyb_yaw_joint"/>
-    <jointpos name="LF_HAA_pos" joint="LF_HAA"/>
-    <jointpos name="LF_HFE_pos" joint="LF_HFE"/>
-    <jointpos name="LF_KFE_pos" joint="LF_KFE"/>
-    <jointpos name="RF_HAA_pos" joint="RF_HAA"/>
-    <jointpos name="RF_HFE_pos" joint="RF_HFE"/>
-    <jointpos name="RF_KFE_pos" joint="RF_KFE"/>
     <jointpos name="LH_HAA_pos" joint="LH_HAA"/>
     <jointpos name="LH_HFE_pos" joint="LH_HFE"/>
     <jointpos name="LH_KFE_pos" joint="LH_KFE"/>
     <jointpos name="RH_HAA_pos" joint="RH_HAA"/>
     <jointpos name="RH_HFE_pos" joint="RH_HFE"/>
     <jointpos name="RH_KFE_pos" joint="RH_KFE"/>
+    <jointpos name="bodyf_pitch_joint_pos" joint="bodyf_pitch_joint"/>
+    <jointpos name="LF_HAA_pos" joint="LF_HAA"/>
+    <jointpos name="LF_HFE_pos" joint="LF_HFE"/>
+    <jointpos name="LF_KFE_pos" joint="LF_KFE"/>
+    <jointpos name="RF_HAA_pos" joint="RF_HAA"/>
+    <jointpos name="RF_HFE_pos" joint="RF_HFE"/>
+    <jointpos name="RF_KFE_pos" joint="RF_KFE"/>
 
-    <jointvel name="bodyf_pitch_joint_vel" joint="bodyf_pitch_joint"/>
     <jointvel name="bodyb_yaw_joint_vel" joint="bodyb_yaw_joint"/>
-    <jointvel name="LF_HAA_vel" joint="LF_HAA"/>
-    <jointvel name="LF_HFE_vel" joint="LF_HFE"/>
-    <jointvel name="LF_KFE_vel" joint="LF_KFE"/>
-    <jointvel name="RF_HAA_vel" joint="RF_HAA"/>
-    <jointvel name="RF_HFE_vel" joint="RF_HFE"/>
-    <jointvel name="RF_KFE_vel" joint="RF_KFE"/>
     <jointvel name="LH_HAA_vel" joint="LH_HAA"/>
     <jointvel name="LH_HFE_vel" joint="LH_HFE"/>
     <jointvel name="LH_KFE_vel" joint="LH_KFE"/>
     <jointvel name="RH_HAA_vel" joint="RH_HAA"/>
     <jointvel name="RH_HFE_vel" joint="RH_HFE"/>
     <jointvel name="RH_KFE_vel" joint="RH_KFE"/>
+    <jointvel name="bodyf_pitch_joint_vel" joint="bodyf_pitch_joint"/>
+    <jointvel name="LF_HAA_vel" joint="LF_HAA"/>
+    <jointvel name="LF_HFE_vel" joint="LF_HFE"/>
+    <jointvel name="LF_KFE_vel" joint="LF_KFE"/>
+    <jointvel name="RF_HAA_vel" joint="RF_HAA"/>
+    <jointvel name="RF_HFE_vel" joint="RF_HFE"/>
+    <jointvel name="RF_KFE_vel" joint="RF_KFE"/>
 
 
 
-    <jointactuatorfrc name="bodyf_pitch_joint_torque" joint="bodyf_pitch_joint" noise="0.01"/>
     <jointactuatorfrc name="bodyb_yaw_joint_torque" joint="bodyb_yaw_joint" noise="0.01"/>
-    <jointactuatorfrc name="LF_HAA_torque" joint="LF_HAA" noise="0.01"/>
-    <jointactuatorfrc name="LF_HFE_torque" joint="LF_HFE" noise="0.01"/>
-    <jointactuatorfrc name="LF_KFE_torque" joint="LF_KFE" noise="0.01"/>
-    <jointactuatorfrc name="RF_HAA_torque" joint="RF_HAA" noise="0.01"/>
-    <jointactuatorfrc name="RF_HFE_torque" joint="RF_HFE" noise="0.01"/>
-    <jointactuatorfrc name="RF_KFE_torque" joint="RF_KFE" noise="0.01"/>
     <jointactuatorfrc name="LH_HAA_torque" joint="LH_HAA" noise="0.01"/>
     <jointactuatorfrc name="LH_HFE_torque" joint="LH_HFE" noise="0.01"/>
     <jointactuatorfrc name="LH_KFE_torque" joint="LH_KFE" noise="0.01"/>
     <jointactuatorfrc name="RH_HAA_torque" joint="RH_HAA" noise="0.01"/>
     <jointactuatorfrc name="RH_HFE_torque" joint="RH_HFE" noise="0.01"/>
     <jointactuatorfrc name="RH_KFE_torque" joint="RH_KFE" noise="0.01"/>
+    <jointactuatorfrc name="bodyf_pitch_joint_torque" joint="bodyf_pitch_joint" noise="0.01"/>
+    <jointactuatorfrc name="LF_HAA_torque" joint="LF_HAA" noise="0.01"/>
+    <jointactuatorfrc name="LF_HFE_torque" joint="LF_HFE" noise="0.01"/>
+    <jointactuatorfrc name="LF_KFE_torque" joint="LF_KFE" noise="0.01"/>
+    <jointactuatorfrc name="RF_HAA_torque" joint="RF_HAA" noise="0.01"/>
+    <jointactuatorfrc name="RF_HFE_torque" joint="RF_HFE" noise="0.01"/>
+    <jointactuatorfrc name="RF_KFE_torque" joint="RF_KFE" noise="0.01"/>
 
     <framequat name="imu_quat" objtype="site" objname="imu"/>
     <gyro name="imu_gyro" site="imu"/>
@@ -215,10 +215,10 @@
     <framepos name="frame_pos" objtype="site" objname="imu"/>
     <framelinvel name="frame_vel" objtype="site" objname="imu"/>
 
-    <touch name="LF_touch" site="LF_touch"/>
-    <touch name="RF_touch" site="RF_touch"/>
     <touch name="LH_touch" site="LH_touch"/>
     <touch name="RH_touch" site="RH_touch"/>
+    <touch name="LF_touch" site="LF_touch"/>
+    <touch name="RF_touch" site="RF_touch"/>
   </sensor>
 
   <keyframe>
