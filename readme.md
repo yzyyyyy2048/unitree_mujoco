@@ -14,6 +14,8 @@ Differences with origin unitree mujoco repo:
   * Anybotics Anymal C
   * CatModel2_v1
   * CatModel2_v2
+  * CatModel2_v2_fixed
+  
 
 
 
