@@ -15,7 +15,7 @@
         <joint range="-1.05 3.14"/>
       </default>
       <default class="KFE">
-        <joint range="-2.70 -0.92"/>
+        <joint range="-2.68 -0.41"/>
         <!-- <motor ctrlrange="-45.43 45.43"/> -->
       </default>
       <default class="visual">
