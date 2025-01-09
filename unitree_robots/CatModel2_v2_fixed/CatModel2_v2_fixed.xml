@@ -16,7 +16,7 @@
       </default>
       <default class="KFE">
         <joint range="-2.68 -0.41"/>
-        <!-- <motor ctrlrange="-45.43 45.43"/> -->
+        <motor ctrlrange="-47.4 47.4"/>
       </default>
       <default class="visual">
         <geom type="mesh" contype="0" conaffinity="0" group="2"/>
