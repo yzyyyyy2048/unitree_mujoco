@@ -55,10 +55,10 @@
       <inertial pos="0.0027732 -0.00068363 0.00099437" mass="0.292406383722703" diaginertia="0.000353654952753145 0.000146330330531832 0.000239971483372341"/>
       <freejoint />
       <geom mesh="base_link" class = "visual"/>
-      <site name="imu" pos="0 0 0.05" />
+      <site name="imu" pos="0 -0.05 0.05" />
       <body name="BF_Link">
         <inertial pos="0.12955 -8.3804e-05 -0.0013141" quat="0.502347 0.496934 -0.502538 0.498157" mass="3.1773" diaginertia="0.00633741 0.00487765 0.00436555"/>
-        <joint name="bodyf_pitch_joint" pos="0 0 0" axis="0 -1 0" range="-0.75 0.75" actuatorfrcrange="-23.7 23.7"/>
+        <joint name="bodyf_pitch_joint" pos="0.02 0 0" axis="0 -1 0" range="-0.75 0.75" actuatorfrcrange="-23.7 23.7"/>
         <geom type="mesh" mesh="BF_Link" class = "visual"/>
         <geom size="0.08 0.1 0.06" pos="0.13 0 0" type="box" rgba="0.752941 0.752941 0.752941 1" class = "collision"/>
         <body name="LF_hip" pos="0.2106 0.05498 -0.00027501">
@@ -100,7 +100,7 @@
       </body>
       <body name="BB_Link">
         <inertial pos="-0.155121 -0.00203709 -0.00355152" quat="0.499291 0.500701 -0.500127 0.499879" mass="3.23275" diaginertia="0.00680652 0.0051472 0.00417841"/>
-        <joint name="bodyb_yaw_joint" pos="0 0 0" axis="0 0 1" range="-0.75 0.75" actuatorfrcrange="-23.7 23.7"/>
+        <joint name="bodyb_yaw_joint" pos="-0.015 0 0" axis="0 0 1" range="-0.75 0.75" actuatorfrcrange="-23.7 23.7"/>
         <geom mesh="BB_Link" class="visual"/>
         <geom size="0.09 0.1 0.06" pos="-0.13 0 0" type="box" class="collision"/>
         <body name="LH_hip" pos="-0.2306 0.05498 -0.00027501">
