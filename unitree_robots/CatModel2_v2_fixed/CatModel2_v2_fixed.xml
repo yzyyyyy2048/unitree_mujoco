@@ -1,4 +1,4 @@
-<mujoco model="CatModel2_v2_fixed">
+<mujoco model="CatModel2_v2">
   <compiler angle="radian" meshdir="assets" texturedir="assets" autolimits="true"/>
 
     <option cone="elliptic" impratio="100"/>
@@ -53,24 +53,26 @@
 
   <worldbody>
     <body name="base_link" pos="0 0 0.4" childclass = "CatModel2_v2_fixed">
-      <inertial pos="-0.013284 -0.001052 -0.002293" mass="6.70" diaginertia="0.01 0.14 0.14"/>
-      <freejoint />
+      <inertial pos="-0.0132868 -0.00105211 -0.00229256" quat="0.00190534 0.705549 0.00632194 0.70863" mass="6.70243" diaginertia="0.176112 0.165836 0.0262575"/>
+      <joint name="floating_base" type="free" limited="false" actuatorfrclimited="false"/> 
       <geom mesh="base_link" class = "visual"/>
-      <site name="imu" pos="-0.05 0 0.06" />
+      <!-- <site name="imu" pos="0.00 0 0.06" quat="0.9990482 0 -0.044 0" /> -->
+      <site name="imu" pos="0.00 0 0.06" />
       <geom mesh="BF_Link" class = "visual"/>
       <geom size="0.08 0.1 0.06" pos="0.13 0 0" type="box" rgba="0.752941 0.752941 0.752941 1" class = "collision"/>
       <geom mesh="BB_Link" class = "visual"/>
       <geom size="0.09 0.1 0.06" pos="-0.13 0 0" type="box" rgba="0.752941 0.752941 0.752941 1" class = "collision"/>
-      <body name="LF_hip" pos="0.2106 0.05498 -0.00027501">
-        <inertial pos="0.059149 0.00048753 5.429e-05" quat="0.707005 0.0039028 0.00377388 0.707188" mass="0.64023" diaginertia="0.00072036 0.000434221 0.000342939"/>
+      <body name="LF_hip" pos="0.2106 0.05498 -0.000275">
+        <inertial pos="0.059149 0.000487509 5.42937e-05" quat="0.493401 0.503185 0.506048 0.497268" mass="0.640228" diaginertia="0.000855628 0.000513713 0.000474779"/>
         <joint name="LF_HAA" class="HAA"/>
         <geom type="mesh" mesh="LF_hip" class="visual"/>
-         <body name="LF_thigh" pos="0.065399 0.02005 0">
-          <inertial pos="-0.0032907 0.041874 -0.028566" quat="0.706599 -0.0231161 -0.0229708 0.706863" mass="0.90246" diaginertia="0.0023903 0.00188734 0.000557266"/>
+        <body name="LF_thigh" pos="0.065399 0.02005 0">
+          <inertial pos="-0.00319263 0.0418747 -0.0295109" quat="0.713478 0.0874035 -0.0201842 0.694911" mass="0.902429" diaginertia="0.00430663 0.00400978 0.00078766"/>
           <joint name="LF_HFE" class="HFE"/>
           <geom type="mesh" mesh="LF_thigh" class="visual"/>
-          <body name="LF_calf" pos="0 0.0617 -0.22">              <inertial pos="0 0 -0.052658" quat="0.707107 0 0 0.707107" mass="0.14476" diaginertia="0.00037167 0.00035039 2.3499e-05"/>
-             <joint name="LF_KFE" class="KFE"/>
+          <body name="LF_calf" pos="0 0.0617 -0.22">
+            <inertial pos="0 0 -0.0526579" quat="0.707107 0 0 0.707107" mass="0.144759" diaginertia="0.00057453 0.0005605 3.075e-05"/>
+            <joint name="LF_KFE" class="KFE"/>
             <geom mesh="LF_calf" class="visual" />
             <geom size="0.09 0.01 0.015" pos="0 0 -0.068" quat="0.707107 0 0.707107 0" type="box" class="collision"/>
             <geom class="foot"/>
@@ -78,34 +80,34 @@
           </body>
         </body>
       </body>
-      <body name="RF_hip" pos="0.2106 -0.05502 -0.00027501">
-        <inertial pos="0.0591491 -0.000487526 -5.42903e-05" quat="0.707188 -0.00377388 -0.0039028 0.707005" mass="0.640225" diaginertia="0.000720361 0.000434223 0.000342942"/>
+      <body name="RF_hip" pos="0.2106 -0.05502 -0.000275">
+        <inertial pos="0.059149 -0.000487509 -5.42937e-05" quat="0.506048 0.497268 0.493401 0.503185" mass="0.640228" diaginertia="0.000855628 0.000513713 0.000474779"/>
         <joint name="RF_HAA" class="HAA"/>
         <geom mesh="RF_hip" class="visual"/>
-         <body name="RF_thigh" pos="0.065399 -0.02005 0">
-           <inertial pos="-0.00317848 -0.0418856 -0.0284737" quat="0.706628 -0.0220836 -0.0218803 0.706902" mass="0.902455" diaginertia="0.00239029 0.00188669 0.000557964"/>
+        <body name="RF_thigh" pos="0.065399 -0.02005 0">
+          <inertial pos="-0.00317858 -0.0418864 -0.0284744" quat="0.693082 -0.0185938 0.0908059 0.714875" mass="0.902429" diaginertia="0.00413894 0.00382908 0.000804188"/>
            <joint name="RF_HFE" class="HFE"/>
            <geom mesh="RF_thigh" class="visual"/>
-           <body name="RF_calf" pos="0 -0.0617 -0.22">
-             <inertial pos="0 0 -0.0526579" quat="0.707107 0 0 0.707107" mass="0.144759" diaginertia="0.000371665 0.000350393 2.34989e-05"/>
-             <joint name="RF_KFE" class="KFE"/>
-             <geom mesh="RF_calf" class="visual"/>
-             <geom size="0.09 0.01 0.015" pos="0 0 -0.068" quat="0.707107 0 0.707107 0" type="box" class="collision"/>
-             <geom class="foot"/>
-             <site name="RF_touch" pos="0 0 -0.18" size="0.022" material="transparent"/>
+          <body name="RF_calf" pos="0 -0.0617 -0.22">
+            <inertial pos="0 0 -0.0526579" quat="0.707107 0 0 0.707107" mass="0.144759" diaginertia="0.00057453 0.0005605 3.075e-05"/>
+            <joint name="RF_KFE" class="KFE"/>
+            <geom mesh="RF_calf" class="visual"/>
+            <geom size="0.09 0.01 0.015" pos="0 0 -0.068" quat="0.707107 0 0.707107 0" type="box" class="collision"/>
+            <geom class="foot"/>
+            <site name="RF_touch" pos="0 0 -0.18" size="0.022" material="transparent"/>
           </body>
-         </body>
+        </body>
       </body>
       <body name="LH_hip" pos="-0.2306 0.05498 -0.00027501">
-        <inertial pos="-0.0591491 0.000487526 -5.42903e-05" quat="0.707188 0.00377388 0.0039028 0.707005" mass="0.640225" diaginertia="0.000720361 0.000434223 0.000342942"/>
+        <inertial pos="-0.059149 0.000487509 -5.42937e-05" quat="0.497268 0.506048 0.503185 0.493401" mass="0.640228" diaginertia="0.000855628 0.000513713 0.000474779"/>
         <joint name="LH_HAA" class="HAA"/>
         <geom mesh="LH_hip" class="visual"/>
         <body name="LH_thigh" pos="-0.065399 0.02005 0">
-          <inertial pos="-0.00326538 0.0418738 -0.0284484" quat="0.706602 -0.023027 -0.0228816 0.706866" mass="0.902455" diaginertia="0.00239029 0.00188711 0.000557543"/>
+          <inertial pos="-0.00326546 0.0418747 -0.0284492" quat="0.712507 0.0909748 -0.0187807 0.695488" mass="0.902429" diaginertia="0.0041341 0.00382473 0.000802854"/>
           <joint name="LH_HFE" class="HFE"/>
           <geom mesh="LH_thigh" class="visual"/>
           <body name="LH_calf" pos="0 0.0617 -0.22">
-            <inertial pos="0 0 -0.0526579" quat="0.707107 0 0 0.707107" mass="0.144759" diaginertia="0.000371665 0.000350393 2.34989e-05"/>
+            <inertial pos="0 0 -0.0526579" quat="0.707107 0 0 0.707107" mass="0.144759" diaginertia="0.00057453 0.0005605 3.075e-05"/>
             <joint name="LH_KFE" class="KFE"/>
             <geom mesh="LH_calf" class="visual"/>
             <geom size="0.09 0.01 0.015" pos="0 0 -0.068" quat="0.707107 0 0.707107 0" type="box" class="collision"/>
@@ -115,15 +117,15 @@
         </body>
       </body>
       <body name="RH_hip" pos="-0.2306 -0.05502 -0.00027501">
-        <inertial pos="-0.0589999 -0.000506528 -1.58979e-05" quat="0.707005 -0.00390284 -0.00377384 0.707188" mass="0.642367" diaginertia="0.000720365 0.000434451 0.000343169"/>
+        <inertial pos="-0.059149 -0.000487509 5.42937e-05" quat="0.491452 0.505813 0.509396 0.493096" mass="0.640228" diaginertia="0.000860842 0.000518309 0.000476"/>
         <joint name="RH_HAA" class="HAA"/>
         <geom mesh="RH_hip" class="visual"/>
         <body name="RH_thigh" pos="-0.065399 -0.02005 0">
-          <inertial pos="-0.00317232 -0.0418856 -0.0284484" quat="0.706629 -0.0220635 -0.0218602 0.706902" mass="0.902455" diaginertia="0.00239029 0.00188663 0.00055802"/>
+          <inertial pos="-0.00317242 -0.0418864 -0.0284492" quat="0.693096 -0.0186609 0.0907935 0.714861" mass="0.902455" diaginertia="0.00413462 0.00382463 0.000804383"/>
           <joint name="RH_HFE" class="HFE"/>
           <geom mesh="RH_thigh" class="visual"/>
           <body name="RH_calf" pos="0 -0.0617 -0.22">
-            <inertial pos="0 0 -0.0526579" quat="0.707107 0 0 0.707107" mass="0.144759" diaginertia="0.000371665 0.000350393 2.34989e-05"/>
+            <inertial pos="0 0 -0.0526579" quat="0.707107 0 0 0.707107" mass="0.144759" diaginertia="0.00057453 0.0005605 3.075e-05"/>
             <joint name="RH_KFE" class="KFE"/>
             <geom mesh="RH_calf" class="visual"/>
             <geom size="0.09 0.01 0.015" pos="0 0 -0.068" quat="0.707107 0 0.707107 0" type="box" class="collision"/>
@@ -135,7 +137,7 @@
     </body>
   </worldbody>
 
-  <actuator>
+    <actuator>
     <motor class="HAA" name="LH_HAA_motor" joint="LH_HAA" />
     <motor class="HFE" name="LH_HFE_motor" joint="LH_HFE" />
     <motor class="KFE" name="LH_KFE_motor" joint="LH_KFE" />
@@ -215,6 +217,4 @@
     <key name="home" qpos="0 0 0.15 1 0 0 0 0.4 1.2 -2.7 -0.4 1.2 -2.7 0.4 1.2 -2.7 -0.4 1.2 -2.7"
       ctrl=" 0 0 0 0 0 0 0 0 0 0 0 0 "/>
   </keyframe>
-
- 
 </mujoco>
