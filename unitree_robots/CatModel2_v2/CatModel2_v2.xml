@@ -55,7 +55,7 @@
       <inertial pos="0.00277324 -0.000683627 0.000994371" quat="0.743012 0.668751 0.0213117 0.015855" mass="0.292406" diaginertia="0.000690027 0.000505254 0.000292089"/>
       <joint name="floating_base" type="free" limited="false" actuatorfrclimited="false"/>
       <geom mesh="base_link" class = "visual"/>
-      <!-- <site name="imu" pos="0.00 0 0.06" quat="0.9990482 0 -0.044 0" /> -->
+      <!-- <site name="imu" pos="0.00 0 0.06" quat="0.999 0.044 0.044 0.002" /> -->
       <site name="imu" pos="0 0 0.05" />
       <body name="BF_Link" pos="0.025 0 -0.0059249">
         <inertial pos="0.104547 -8.38157e-05 0.0046108" quat="0.0094723 0.69941 -0.00673642 0.714626" mass="3.17727" diaginertia="0.0240092 0.0189641 0.0122271"/>
