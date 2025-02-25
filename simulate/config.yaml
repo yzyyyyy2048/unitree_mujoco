@@ -7,7 +7,7 @@ robot: "CatModel2_v2_BF"  # Robot name, "go2", "b2", "b2w", "h1", "go2w", "g1"
 #       anybotics     : "anymal_b" "anymal_c"
 #       CatModel2     : "CatModel2_v1" "CatModel2_v2"
 
-robot_scene: "scene.xml" # Robot scene, /unitree_robots/[robot]/scene.xml 
+robot_scene: "scene_terrain.xml" # Robot scene, /unitree_robots/[robot]/scene.xml 
 
 domain_id: 1  # Domain id
 interface: "lo" # Interface 
