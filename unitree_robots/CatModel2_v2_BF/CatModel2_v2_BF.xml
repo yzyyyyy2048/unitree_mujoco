@@ -53,7 +53,7 @@
   
 
   <worldbody>
-    <body name="BF_Link" pos="0 0 0.42" childclass = "CatModel2_v2_BF">
+    <body name="BF_Link" pos="0 0 0.42"  quat="1 0 0 0"  childclass = "CatModel2_v2_BF">
       <inertial pos="-0.00295323 -6.38809e-05 0.00461007" quat="0.0094723 0.69941 -0.00673642 0.714626" mass="3.17727" diaginertia="0.0240092 0.0189641 0.0122271"/>
       <joint name="floating_base" type="free" limited="false" actuatorfrclimited="false"/>
       <geom type="mesh" mesh="BF_Link" class = "visual"/>
